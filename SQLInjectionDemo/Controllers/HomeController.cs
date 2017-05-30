@@ -67,7 +67,7 @@ namespace SQLInjectionDemo.Controllers
                     TempData["UserName"] = dt.Rows[0]["Email"].ToString();
                     return RedirectToAction("Dashboard", "Home");
                 }
-
+                
 
                 #endregion
 
@@ -158,6 +158,7 @@ namespace SQLInjectionDemo.Controllers
 
                 /*
                 SQLInjectionDemoEntities dbCnt = new SQLInjectionDemoEntities();
+                string cmdStr = "SELECT * FROM Admin WHERE Email = '" + useremail + "' AND Password = '" + userpwd + "'";
 
                 List<Admin> res = dbCnt.Database.SqlQuery<Admin>(cmdStr).ToList();
                 if (res.Count > 0)
